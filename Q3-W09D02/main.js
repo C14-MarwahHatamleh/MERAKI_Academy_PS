@@ -5,8 +5,16 @@ Write a function reverses the characters of every word of a sentence. sentences 
 */
 
 const reverseEachWord = (str) => {
-  // YOUR CODE HERE
- 
+  let reverseWord;
+  
+ if (str.trim() ===""){
+  reverseWord =  "Wrong!! it's empty string"
+ }
+ else {
+  reverseWord =  str.split("").reverse().join("").split(" ");
+  reverseWord = reverseWord[1] +" "+reverseWord[0];
+ }
+ return reverseWord
 };
 
 /* 
