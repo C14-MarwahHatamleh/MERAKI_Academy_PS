@@ -5,7 +5,18 @@ write a function to return the largest word in the string
 */
 
 const longestWord = (str) => {
-  // YOUR CODE HERE
+  let longestWord;
+  if(str === ""){
+    longestWord = "it's empty string"
+  } else {
+    const SplitWord = str.split(" ");
+    for (let i = 0 ; i<SplitWord.length ; i++){
+      if(SplitWord[i].length >=4){
+        longestWord = SplitWord[i];
+      }
+    }
+  }
+return longestWord;
 };
 
 /* 
