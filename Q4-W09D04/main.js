@@ -13,6 +13,7 @@ const longestWord = (str) => {
     for (let i = 0 ; i<SplitWord.length ; i++){
       if(SplitWord[i].length >=4){
         longestWord = SplitWord[i];
+        break;
       }
     }
   }
