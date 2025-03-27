@@ -5,7 +5,43 @@ Have the function findIntersection(strArr) read the array of strings stored in s
 */
 
 const findIntersection = (strArr) => {
-  // YOUR CODE HERE
+  let arrOne = strArr[0].toString().split(",");
+  let arrTwo = strArr[1].toString().split(",");
+let arr=[];
+  //console.log(arr)
+ let a , b;
+ // console.log(arrOne , arrTwo)
+  //return  strArr.find((ele) => ele === ele)
+  for (let i = 0; i < arrOne.length;i++ ) {
+    //console.log(strArr[i][3])
+    for (let j = 0; j < arrTwo.length; j++) {
+      if(arrOne[i] === arrTwo[j]){
+        arr.push(arrOne[i])
+      }
+    }
+    
+    //   arr.push(strArr[i])
+    // }
+    // a = strArr[i];
+    // for (let j = strArr.length; j <= 0; j--) {
+    //   // if(strArr[i] === strArr[j]){
+    //  b = strArr[j];
+    //   // }
+      
+    // console.log(i , j)
+    // }
+    // if(a === b){
+    //   arr.push(a)
+    // }
+    // if(a === b){
+    //   arr.push(a)
+    // }
+  }
+  if(arr.length === 0){
+    return false;
+  }
+  
+  return arr.toString().replaceAll(" ", "");
 };
 
 /*
