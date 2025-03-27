@@ -5,7 +5,8 @@ Write a function that returns the number of unique items in an array.
 */
 
 const uniqueItems = (arr) => {
-  // YOUR CODE HERE
+  let res = [...new Set(arr)]
+ return res.length;
 };
 
 /*
