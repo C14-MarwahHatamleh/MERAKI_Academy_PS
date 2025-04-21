@@ -5,7 +5,11 @@ Write a function accepts an array of integers and returns the Maximum product po
 */
 
 const maximumProductOfThree = (arr) => {
-  // YOUR CODE HERE
+  let productNum = 1;
+  for (let i = 0; i < arr.length; i++) {
+    productNum *= arr[i];
+  }
+  return productNum;
 };
 
 /*

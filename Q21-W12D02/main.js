@@ -14,8 +14,17 @@
       |  buzz |   
 */
 
-const fizzBuzz = (n) => {
-  // your code here
+const fizzBuzz = (number) => {
+ 
+  let a;
+  if (number === 1) {
+    return 1;
+  }
+
+  a = number + " " + fizzBuzz(number - 1);
+
+
+return a;
 };
 
-module.exports = {fizzBuzz};
+//module.exports = {fizzBuzz};

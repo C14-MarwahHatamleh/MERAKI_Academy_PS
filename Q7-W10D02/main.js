@@ -5,8 +5,15 @@ Write a function that returns the number of unique items in an array.
 */
 
 const uniqueItems = (arr) => {
-  let res = [...new Set(arr)]
- return res.length;
+//   let res = [...new Set(arr)]
+//  return res.length;
+
+return  arr.reduce((acc , ele) =>{
+  acc.push(ele)
+console.log(acc)
+} , [] )
+
+return acc;
 };
 
 /*
