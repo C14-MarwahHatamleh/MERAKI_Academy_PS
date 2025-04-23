@@ -6,7 +6,11 @@ Given an integer n, return n! (n factorial)
 */
 
 const findFactorial = (num) => {
-  // YOUR CODE HERE
+ 
+  if(num === 1){
+    return 1;
+  }
+  return num * findFactorial(num -1)
 };
 
 /*

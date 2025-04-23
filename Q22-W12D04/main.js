@@ -12,7 +12,20 @@ If the username is valid then your program should return the string true, otherw
 */
 
 const usernameValidation = (str) => {
-  // YOUR CODE HERE
+  let FirstCharPattern = /^[a-zA-Z]+$/;
+  let StringPattern = /^\w+$/;
+
+  // let result = pattern.test(str[0]);
+  // console.log(result)
+  if (str.length >= 4 && str.length <= 25) {
+    if (
+      FirstCharPattern.test(str[0]) &&
+      StringPattern.test(str) &&
+      str[str.length] !== "_" ) {
+        return true
+    }
+  }
+  return false;
 };
 
 /* 
