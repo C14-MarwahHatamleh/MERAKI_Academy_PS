@@ -8,7 +8,22 @@ Hint: her resource for Regular expressions you can check it and read more (https
 */
 
 const longestWord_2 = (str) => {
-  // YOUR CODE HERE
+  const string = str.replace(/[^\w\s]|_/g, "");
+  const StringArr = string.split(" ");
+  console.log(StringArr);
+
+  let obj = {};
+  StringArr.forEach((element) => {
+    if (!obj[element]) {
+      obj[element] = element.length;
+    }
+  });
+
+  const max = Math.max(...Object.values(obj))
+  const a =  Object.keys(obj).filter(key => obj[key] === max);
+
+
+return a[0].toString()
 };
 
 /* 

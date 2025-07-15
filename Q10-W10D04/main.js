@@ -7,7 +7,9 @@ Hint : her resource for Prototype you can check it and read more (https://www.w3
 */
 
 Array.prototype.isPartOf = function (array) {
-  // YOUR CODE HERE
+ return this.every((element) => 
+ array.includes(element));
+
 };
 
 /*

@@ -7,13 +7,20 @@ Write a function that returns the number of unique items in an array.
 const uniqueItems = (arr) => {
 //   let res = [...new Set(arr)]
 //  return res.length;
+let obj ={};
+let array = []
+arr.forEach(element => {
+  if( !obj[element])
+  obj[element]=element
 
-return  arr.reduce((acc , ele) =>{
-  acc.push(ele)
-console.log(acc)
-} , [] )
-
-return acc;
+});
+// return  arr.reduce((acc , ele) =>{
+//   acc.push(ele)
+// console.log(acc)
+// } , [] )
+array.push(Object.values(obj))
+return array[0].length
+// return acc;
 };
 
 /*

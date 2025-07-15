@@ -6,7 +6,28 @@ If the url does not contain a query string, return undefined
 */
 
 const getQueryString = (url) => {
-  // YOUR CODE HERE
+  const urlArray = [];
+  let urlQueryString = url.split("?")[1];
+//  const test = JSON.stringify(urlQueryString.split("").join(""))
+//  console.log(test)
+  //  const url = urlQueryString.replaceAll("/^\d+$/" , "")
+  // /console.log(urlQueryString);
+   urlQueryString = urlQueryString.split("&");
+  // const StringUrl = JSON.stringify(urlQueryString.join("").split(""))
+  // console.log(StringUrl)
+   for(let i = 0 ; i <urlQueryString.length ; i++){
+// console.log(JSON.stringify(urlQueryString[i]))
+const a = urlQueryString[i].replaceAll("=" , ", ")
+ console.log(a)
+
+urlArray.push([a])
+   }
+  
+   //urlArray.push(...urlQueryString)
+  //  const urlString = urlQueryString.join(" ").replaceAll("=",", ")
+  //  const a = urlString.split(" ")
+  // const a = urlArray.join("").replace("=" , ", ")
+ console.log(urlArray)
 };
 
 /* 
