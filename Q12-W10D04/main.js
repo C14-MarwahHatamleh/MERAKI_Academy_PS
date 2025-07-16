@@ -5,7 +5,24 @@ Find the first item which appear an even number of times in an array.
 */
 
 const evenAppearance = (array) => {
-  // YOUR CODE HERE
+ let obj = {}
+
+ array.forEach(element => {
+  if(!obj[element]){
+    obj[element] = 1
+  }
+  else {
+    obj[element] += 1
+  }
+ });
+ console.log(obj)
+for (const el of array) {
+    if (obj[el] % 2 === 0) {
+      return el;
+    }
+  }
+
+
 };
 
 /*

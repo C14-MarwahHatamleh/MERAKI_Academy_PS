@@ -5,7 +5,21 @@ Write a function returns true if a number is a power of 2, and false if not.
 */
 
 const isPowerOfTwo = (num) => {
-  // YOUR CODE HERE
+  let b;
+  if (num < 0 || num === 0) {
+    return false;
+  }
+  if (num === 1) {
+    return true;
+  }
+  while (num > 1) {
+    if (num % 2 !== 0) {
+      return false;
+    }
+    num = num / 2;
+  }
+
+  return true;
 };
 /*
 Examples:
